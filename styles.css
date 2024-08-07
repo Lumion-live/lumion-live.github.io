@@ -201,7 +201,7 @@ body {
         height: 400px;
     }
 
-    .extra-content:nth-child(even) {
+    .extra-content.reverse {
         flex-direction: row-reverse; /* Reverse row direction for even children */
     }
 
