@@ -192,16 +192,16 @@ body {
         display: none;
     }
 
-    .extra-content {
+    .desktop-content {
         flex-direction: row; /* Row layout on desktop */
         height: 400px;
     }
 
-    .extra-content:nth-child(even) {
-        flex-direction: row-reverse; /* Reverse row direction for even children */
+    .desktop-content.reverse {
+        flex-direction: row-reverse; /* Reverse row direction for specific children */
     }
 
-    .extra-content .content-block {
+    .desktop-content .content-block {
         width: 50%;
     }
 
