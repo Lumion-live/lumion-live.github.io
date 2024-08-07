@@ -152,9 +152,15 @@ body {
     width: 50%;
 }
 
+.extra-content .image-block {
+    width: 100%;
+    height: 100%;
+}
+
 .extra-content .image-block img {
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the block without stretching */
 }
 
 .extra-content .text-block {
