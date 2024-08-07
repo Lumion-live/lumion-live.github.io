@@ -6,20 +6,23 @@ document.querySelector('.close-btn').addEventListener('click', function() {
     document.querySelector('.full-screen-menu').classList.remove('active');
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    function checkAspectRatio() {
-        const desktopDiv = document.querySelector('.desktop');
-        const mobileDiv = document.querySelector('.mobile');
+function updateDivs() {
+    const desktopDiv = document.getElementById('desktop');
+    const mobileDiv = document.getElementById('mobile');
 
-        if (window.innerWidth > window.innerHeight) {
-            desktopDiv.style.display = 'block';
-            mobileDiv.style.display = 'none';
-        } else {
-            desktopDiv.style.display = 'none';
-            mobileDiv.style.display = 'block';
-        }
+    if (window.innerWidth > window.innerHeight) {
+        // If the window is wider than it is tall
+        desktopDiv.style.display = 'block';
+        mobileDiv.style.display = 'none';
+    } else {
+        // If the window is taller than it is wide
+        desktopDiv.style.display = 'none';
+        mobileDiv.style.display = 'block';
     }
+}
 
-    window.addEventListener('resize', checkAspectRatio);
-    checkAspectRatio();
-});
+// Run the function initially
+updateDivs();
+
+// Add event listener for window resize
+window.addEventListener('resize', updateDivs);
