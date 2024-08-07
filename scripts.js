@@ -3,24 +3,40 @@ document.addEventListener('DOMContentLoaded', function() {
         const desktopDiv = document.getElementById('desktop');
         const mobileDiv = document.getElementById('mobile');
 
-        if (window.innerWidth > window.innerHeight) {
-            // If the window is wider than it is tall
-            desktopDiv.style.display = 'block';
-            mobileDiv.style.display = 'none';
+        if (desktopDiv && mobileDiv) {
+            if (window.innerWidth > window.innerHeight) {
+                // If the window is wider than it is tall
+                desktopDiv.style.display = 'block';
+                mobileDiv.style.display = 'none';
+            } else {
+                // If the window is taller than it is wide
+                desktopDiv.style.display = 'none';
+                mobileDiv.style.display = 'block';
+            }
         } else {
-            // If the window is taller than it is wide
-            desktopDiv.style.display = 'none';
-            mobileDiv.style.display = 'block';
+            console.error('One or both of the div elements (desktop or mobile) are not found in the DOM.');
         }
     }
 
-    document.querySelector('.hamburger').addEventListener('click', function() {
-        document.querySelector('.full-screen-menu').classList.add('active');
-    });
+    const hamburger = document.querySelector('.hamburger');
+    const closeBtn = document.querySelector('.close-btn');
+    const fullScreenMenu = document.querySelector('.full-screen-menu');
 
-    document.querySelector('.close-btn').addEventListener('click', function() {
-        document.querySelector('.full-screen-menu').classList.remove('active');
-    });
+    if (hamburger && fullScreenMenu) {
+        hamburger.addEventListener('click', function() {
+            fullScreenMenu.classList.add('active');
+        });
+    } else {
+        console.error('Hamburger menu or full-screen menu elements are not found in the DOM.');
+    }
+
+    if (closeBtn && fullScreenMenu) {
+        closeBtn.addEventListener('click', function() {
+            fullScreenMenu.classList.remove('active');
+        });
+    } else {
+        console.error('Close button or full-screen menu elements are not found in the DOM.');
+    }
 
     // Run the function initially
     updateDivs();
