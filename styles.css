@@ -141,6 +141,7 @@ body {
     display: flex;
     flex-direction: row;
     height: 400px;
+    width: 100%;
 }
 
 .extra-content .content-block {
@@ -148,6 +149,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 50%;
 }
 
 .extra-content .image-block img {
@@ -163,6 +165,7 @@ body {
     align-items: center;
     color: #000000;
     font-size: 24px;
+    width: 50%;
 }
 
 .extra-content .text-block div {
@@ -190,6 +193,7 @@ body {
     }
 
     .extra-content .content-block {
+        width: 100%;
         height: 400px;
     }
 }
