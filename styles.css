@@ -181,6 +181,11 @@ body {
     display: none;
 }
 
+/* Hide desktop content on mobile */
+.mobile-content {
+    display: none;
+}
+
 /* Alternate text and image positions on desktop */
 @media (min-aspect-ratio: 1/1) {
     .navbar .hamburger {
@@ -198,5 +203,24 @@ body {
 
     .extra-content .content-block {
         width: 50%;
+    }
+
+    .desktop-content {
+        display: flex;
+    }
+
+    .mobile-content {
+        display: none;
+    }
+}
+
+/* Show mobile content on mobile */
+@media (max-aspect-ratio: 1/1) {
+    .desktop-content {
+        display: none;
+    }
+
+    .mobile-content {
+        display: flex;
     }
 }
