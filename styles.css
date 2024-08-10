@@ -27,6 +27,10 @@ body {
     font-size: 24px; /* Maintain the same font size for the logo */
 }
 
+.navbar .menu {
+    display: flex; /* Default display for the menu */
+}
+
 .navbar a {
     text-decoration: none;
     color: #001207; /* Change text color to solid black */
@@ -44,6 +48,13 @@ body {
     border-radius: 3px;
     bottom: -5px;
     left: 0;
+}
+
+/* Hamburger menu styles */
+.hamburger {
+    display: none; /* Hidden by default */
+    font-size: 30px; /* Increase size of the hamburger icon */
+    cursor: pointer;
 }
 
 /* Full-screen menu styles */
@@ -182,14 +193,20 @@ body {
 }
 
 /* Responsive styles */
-.hamburger {
-    display: none;
+@media (max-aspect-ratio: 1/1) {
+    .navbar .menu {
+        display: none; /* Hide the regular menu on narrow screens */
+    }
+
+    .hamburger {
+        display: block; /* Show the hamburger icon on narrow screens */
+    }
 }
 
 /* Alternate text and image positions on desktop */
 @media (min-aspect-ratio: 1/1) {
     .navbar .hamburger {
-        display: none;
+        display: none; /* Hide the hamburger icon on wide screens */
     }
 
     .desktop {
@@ -214,9 +231,5 @@ body {
 @media (max-aspect-ratio: 1/1) {
     .mobile {
         display: block; /* Show mobile content */
-    }
-
-    .hamburger {
-        display: block;
     }
 }
