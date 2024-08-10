@@ -164,12 +164,15 @@ body {
 
 .extra-content .image-block {
     height: 400px;
+    width: 100%; /* Ensure images take full width */
 }
 
 .extra-content .image-block img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    margin: 0; /* Remove any margin that might be affecting the image */
+    padding: 0; /* Ensure no padding affects the image display */
 }
 
 .extra-content .text-block {
@@ -181,8 +184,8 @@ body {
     color: #000000;
     font-size: 34px;
     height: 400px;
-    text-align: center; /* Center all text */
-    padding: 4px 6px 6px 6px; /* Add 6px padding on sides and bottom, 4px on top */
+    text-align: center;
+    padding: 4px 6px 6px 6px; /* 6px padding on sides and bottom, 4px on top */
 }
 
 .extra-content .text-block div {
@@ -190,7 +193,7 @@ body {
 }
 
 .extra-content .text-block b {
-    margin-bottom: 4px; /* Add space between title and text */
+    margin-bottom: 4px; /* Space between title and text */
 }
 
 .extra-content .text-block div:last-child {
