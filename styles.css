@@ -189,8 +189,8 @@ body {
 
 /* Button Panel styles */
 .button-panel {
-    background-color: #e2e3e5;
-    height: 400px;
+    background-color: #3c4639; /* Updated background color */
+    height: calc(15px + 64px + 15px); /* 64px is the button height; added 15px padding to top and bottom */
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -199,7 +199,7 @@ body {
 
 .button-panel .rounded-button {
     color: #E4EFDE;
-    border: 2px solid #E4EFDE;
+    border: 3px solid #E4EFDE; /* Thicker border */
     border-radius: 50px;
     padding: 15px 30px;
     text-decoration: none;
