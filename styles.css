@@ -181,10 +181,20 @@ body {
     color: #000000;
     font-size: 34px;
     height: 400px;
+    text-align: center; /* Center all text */
+    padding: 4px 6px 6px 6px; /* Add 6px padding on sides and bottom, 4px on top */
 }
 
 .extra-content .text-block div {
     margin: 10px 0;
+}
+
+.extra-content .text-block b {
+    margin-bottom: 4px; /* Add space between title and text */
+}
+
+.extra-content .text-block div:last-child {
+    font-size: 15px; /* Set font size of longer text */
 }
 
 /* Button Panel styles */
