@@ -18,4 +18,10 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         console.error('Close button or full-screen menu elements are not found in the DOM.');
     }
+
+    if (window.location.hash === '#latest') {
+        // Remove the hash from the URL and refresh the page
+        window.location.href = window.location.origin + window.location.pathname;
+        window.location.reload(true); // Force a hard refresh to bypass the cache
+    }
 });
