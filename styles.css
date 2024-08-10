@@ -159,7 +159,7 @@ body {
 .extra-content .image-block {
     height: 400px;
     width: 100%;
-    overflow: hidden; /* Prevents any overflow issues */
+    overflow: hidden;
 }
 
 .extra-content .image-block img {
@@ -168,6 +168,7 @@ body {
     object-fit: cover;
     margin: 0;
     padding: 0;
+    display: block;
 }
 
 /* Text Block Styles */
@@ -176,20 +177,27 @@ body {
     color: #000000;
     height: 400px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 4px 6px 6px 6px;
+    box-sizing: border-box; /* Ensure padding does not affect height */
+}
+
+.extra-content .text-block .text-content {
+    max-width: 90%;
+    margin: 0 auto;
 }
 
 .extra-content .text-block b {
     margin-bottom: 4px;
+    font-size: 20px;
 }
 
-.extra-content .text-block div {
-    margin: 10px 0;
-    font-size: 15px; /* Set font size of the longer text */
+.extra-content .text-block p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.5;
 }
 
 /* Button Panel styles */
