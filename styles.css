@@ -162,19 +162,21 @@ body {
     width: 100%;
 }
 
+/* Image Block Styles */
 .extra-content .image-block {
     height: 400px;
-    width: 100%; /* Ensure images take full width */
+    width: 100%;
 }
 
 .extra-content .image-block img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    margin: 0; /* Remove any margin that might be affecting the image */
-    padding: 0; /* Ensure no padding affects the image display */
+    margin: 0;
+    padding: 0;
 }
 
+/* Text Block Styles */
 .extra-content .text-block {
     background-color: #e2e3e5;
     display: flex;
@@ -182,22 +184,18 @@ body {
     justify-content: center;
     align-items: center;
     color: #000000;
-    font-size: 34px;
     height: 400px;
+    padding: 4px 6px 6px 6px;
     text-align: center;
-    padding: 4px 6px 6px 6px; /* 6px padding on sides and bottom, 4px on top */
+}
+
+.extra-content .text-block b {
+    margin-bottom: 4px;
 }
 
 .extra-content .text-block div {
     margin: 10px 0;
-}
-
-.extra-content .text-block b {
-    margin-bottom: 4px; /* Space between title and text */
-}
-
-.extra-content .text-block div:last-child {
-    font-size: 15px; /* Set font size of longer text */
+    font-size: 15px; /* Set font size of the longer text */
 }
 
 /* Button Panel styles */
