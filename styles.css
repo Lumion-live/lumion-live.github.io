@@ -189,7 +189,7 @@ body {
 
 /* Button Panel styles */
 .button-panel {
-    background-color: #3c4639; /* Updated background color */
+    background-color: #3c4639;
     height: calc(15px + 64px + 15px); /* 64px is the button height; added 15px padding to top and bottom */
     display: flex;
     justify-content: center;
@@ -205,6 +205,7 @@ body {
     text-decoration: none;
     font-size: 18px;
     transition: background-color 0.3s, color 0.3s;
+    margin: 0 5px; /* Add 10px spacing between buttons (5px on each side) */
 }
 
 .button-panel .rounded-button:hover {
