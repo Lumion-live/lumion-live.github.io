@@ -215,4 +215,8 @@ body {
     .mobile {
         display: block; /* Show mobile content */
     }
+
+    .hamburger {
+        display: block;
+    }
 }
